@@ -1,0 +1,12 @@
+<p>New task</p>
+
+<form action="/tasks" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <h3>Title</h3>
+  <input type="text" name="task[title]" placeholder="Task">
+  <h3>Details</h3>
+  <input type="text" name="task[details]" placeholder="Details">
+  <input type="submit">
+</form>
+
+<%= link_to "Back to list", tasks_path %>
